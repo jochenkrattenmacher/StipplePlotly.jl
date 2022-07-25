@@ -610,6 +610,7 @@ Base.@kwdef mutable struct PlotLayoutAxis
   tickfont::Union{Font,Nothing} = nothing
   tickformat::Union{String,Nothing} = nothing
   ticklabelmode::Union{String,Nothing} = nothing
+  ticklabeloverflow::Union{String,Nothing} = nothing # "allow" | "hide past div" | "hide past domain"
   ticklabelposition::Union{String,Nothing} = nothing
   ticklen::Union{Int,Nothing} = nothing
   tickmode::Union{String,Nothing} = nothing
@@ -663,7 +664,7 @@ function Base.Dict(la::PlotLayoutAxis)
     :minexponent, :mirror, :nticks, :overlaying, :position, :range, :rangemode, :scaleanchor,
     :scaleratio, :showdividers, :showexponent, :showgrid, :showline, :showspikes, :showticklabels,
     :side, :spikecolor, :spikedash, :spikemode, :spikesnap, :spikethickness, :tick0, :tickangle,
-    :tickcolor, :tickfont, :tickformat, :ticklabelmode, :ticklabelposition, :ticklen, :tickmode,
+    :tickcolor, :tickfont, :tickformat, :ticklabelmode, :ticklabeloverflow, :ticklabelposition, :ticklen, :tickmode,
     :tickprefix, :ticks, :tickson, :ticksuffix, :ticktext, :tickvals, :tickwidth, :title, :type,
     :visible, :zeroline, :zerolinecolor, :zerolinewidth])
 
